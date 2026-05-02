@@ -12,8 +12,8 @@ app.secret_key = os.getenv('SECRET_KEY', '3f2e9c03a0b14589c2d98f2e5f47df1b')
 
 # ─── Page Routes ───────────────────────────────────────────
 @app.route('/')
-def home():
-    return render_template('home.html')
+def index():
+    return render_template('index.html')
 
 @app.route('/about')
 def about():
