@@ -1,0 +1,139 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to bottom, #0b1d51, #000011);
+    color: white; /* Global white text */
+}
+
+/* HERO SECTION */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px 20px;
+    border-radius: 12px;
+}
+
+.hero-text {
+    color: white;
+}
+
+.hero-text h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+}
+
+.typed-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffd700;
+}
+
+.hero-image img {
+    width: 900%;
+    max-width:600px; /* Reduced size */
+    height: auto;
+    border-radius: 12px;
+}
+
+/* INTRO SECTION */
+.intro-section {
+    padding: 60px 20px;
+    border-radius: 12px;
+}
+
+.intro-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.intro-text {
+    flex: 1;
+    min-width: 250px;
+    color: white;
+}
+
+.avatar {
+    flex-shrink: 0;
+}
+
+.avatar img {
+    width: 500px;
+    height: 300px;
+
+}
+
+
+/* SOCIAL SECTION */
+.social-section {
+    padding: 60px 20px;
+    text-align: center;
+    border-radius: 12px;
+}
+
+.social-links a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.social-icon {
+    width: 50px !important;
+    height: 40px !important;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+}
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9rem;
+    color: hwb(0 94% 5%);
+}
+
+/* TYPING EFFECT */
+.typing-text {
+    font-size: 2rem;
+    font-weight: bold;
+    color: lab(95.87% 1.67 0.58);
+}
+
+.cursor {
+    display: inline-block;
+    background-color: white;
+    margin-left: 2px;
+    width: 2px;
+    animation: blink 1s infinite;
+    height: 1.2em;
+    vertical-align: bottom;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .intro-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .avatar img {
+        margin-top: 20px;
+    }
+}

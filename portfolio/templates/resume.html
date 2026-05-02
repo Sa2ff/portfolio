@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}Resume{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/resume.css') }}">
+{% endblock %}
+
+{% block content %}
+<section class="resume">
+    <h2>My Resume</h2>
+
+    <!-- Resume Image Preview -->
+    <div class="resume-image">
+        <img src="{{ url_for('static', filename='images/resume.svg') }}" alt="Resume Preview">
+    </div>
+
+    <!-- View and Download Buttons -->
+    <div class="resume-links">
+        <a href="{{ url_for('static', filename='documents/resume.pdf') }}" target="_blank" class="view-resume">
+            View Resume
+        </a>
+        <a href="{{ url_for('static', filename='documents/resume.pdf') }}" class="download-resume" download>
+            Download Resume
+        </a>
+    </div>
+</section>
+<footer class="footer">
+    <p>Designed and Developed by Maya kadayat </p>
+    <p>&copy; 2025 SS</p>
+</footer>
+{% endblock %}

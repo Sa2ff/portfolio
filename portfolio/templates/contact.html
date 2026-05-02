@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block title %}Contact{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/contact.css') }}">
+{% endblock %}
+
+{% block content %}
+{% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    {% for category, message in messages %}
+      <div class="alert alert-{{ category }} alert-dismissible fade show mt-3 mx-3" role="alert">
+        {{ message }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+
+
+<section class="contact">
+<div class="contact-container">
+    <h2 class="form-title">Contact Me</h2>
+<img src="{{ url_for('static', filename='images/contact.svg') }}" alt="Contact Illustration" class="contact-image">
+
+    <form method="POST" action="/submit-form">
+        <div class="mb-4">
+            <label for="name" class="form-label">Full Name</label>
+            <input type="text" name="name" id="name" class="form-control" placeholder="John Doe" required>
+        </div>
+
+        <div class="mb-4">
+            <label for="email" class="form-label">Email Address</label>
+            <input type="email" name="email" id="email" class="form-control" placeholder="example@email.com" required>
+        </div>
+
+        <div class="mb-4">
+            <label for="subject" class="form-label">Subject</label>
+            <input type="text" name="subject" id="subject" class="form-control" placeholder="Subject of your message" required>
+        </div>
+
+        <div class="mb-4">
+            <label for="message" class="form-label">Your Message</label>
+            <textarea name="message" id="message" class="form-control" rows="6" placeholder="Write your message here..." required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary w-100">Send Message</button>
+    </form>
+</div>
+</section>
+<footer class="footer">
+    <p>Designed and Developed by Maya kadayat</p>
+    <p>&copy; 2025 SS</p>
+</footer>
+{% endblock %}

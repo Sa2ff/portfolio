@@ -1,0 +1,130 @@
+/* About Section Container */
+.about-section-wrapper {
+  padding: 40px 20px;
+  
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+}
+
+/* Inner Content Wrapper */
+.about-content-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 1000px;
+  width: 100%;
+  border-radius: 12px;
+
+  padding: 30px;
+  color: white;
+}
+
+/* Main Text Content */
+.about-content {
+  flex: 1 1 60%;
+  min-width: 280px;
+}
+
+/* About Image Section */
+.about-image {
+  flex: 1 1 35%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  order: 2;
+}
+
+/* Image Styling */
+.image-wrapper {
+  
+  border-radius: 50%;
+  padding: 10px;
+  
+}
+
+.image-wrapper img {
+  border-radius: 50%;
+  max-width: 300px;
+  display: block;
+}
+
+/* Custom List (No Dots) */
+.horizontal-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 0;
+  list-style: none;
+}
+
+.horizontal-list li {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+
+/* Icons for Skills/Tools */
+.skill-icon {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+/* Quote Block */
+blockquote {
+  margin: 20px 0;
+  padding-left: 20px;
+  border-left: 4px solid #fff;
+  font-style: italic;
+  opacity: 0.8;
+}
+
+.social-links {
+    padding: 60px 20px;
+    text-align: center;
+    border-radius: 12px;
+}
+
+.social-links a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.social-icon {
+    width: 50px !important;
+    height: 40px !important;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+}
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9rem;
+    color: hwb(0 94% 5%);
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .intro-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .avatar img {
+        margin-top: 20px;
+    }
+}

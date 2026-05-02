@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+
+{% block title %}About{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
+{% endblock %}
+
+{% block content %}
+<section class="about-section-wrapper">
+  <div class="about-content-wrapper">
+
+    <div class="about-image">
+      <div class="image-wrapper">
+        <img src="{{ url_for('static', filename='images/about.svg') }}" alt="Susi Sharma">
+      </div>
+    </div>
+
+    <div class="about-content">
+      <h1>Know Who I'M</h1>
+      <p>Hi Everyone, I am <strong>Maya kadayat</strong> from Kathmandu, Nepal.</p>
+      <p>I am currently employed as a software developer at Bhaktapur.</p>
+      <p>I have completed my Bachelor's Degree from Pokhara University at Universal Engineering and Science College, Chakupat, Lalitpur.</p>
+
+      <h2>Apart from coding, I love:</h2>
+      <ul class="custom-list">
+        <li>✔ Playing Games</li>
+        <li>✔ Dancing</li>
+        <li>✔ Reading Books</li>
+        <li>✔ Travelling</li>
+        <li>✔ Singing</li>
+      </ul>
+
+      <blockquote>"Strive to build things that make a difference!"</blockquote>
+      <p>— Maya</p>
+
+      <h2>Professional Skillset</h2>
+        <ul class="icon-list horizontal-list">
+        <li><img src="{{ url_for('static', filename='images/java.svg') }}" class="skill-icon" alt="Java"> Java</li>
+        <li><img src="{{ url_for('static', filename='images/python.svg') }}" class="skill-icon" alt="Python"> Python</li>
+        <li><img src="{{ url_for('static', filename='images/ai.svg') }}" class="skill-icon" alt="AI"> AI</li>
+        <li><img src="{{ url_for('static', filename='images/css.svg') }}" class="skill-icon" alt="CSS"> CSS</li>
+        <li><img src="{{ url_for('static', filename='images/html.svg') }}" class="skill-icon" alt="HTML"> HTML</li>
+      </ul>
+
+      <h2>Tools I Use</h2>
+        <ul class="icon-list horizontal-list">
+        <li><img src="{{ url_for('static', filename='images/postman.svg') }}" class="skill-icon" alt="Postman"> Postman</li>
+        <li><img src="{{ url_for('static', filename='images/sts.svg') }}" class="skill-icon" alt="Spring Tool Suite"> Spring Tool Suite</li>
+        <li><img src="{{ url_for('static', filename='images/vscode.svg') }}" class="skill-icon" alt="VS Code"> VS Code</li>
+        <li><img src="{{ url_for('static', filename='images/sql.svg') }}" class="skill-icon" alt="SQL"> SQL</li>
+        <li><img src="{{ url_for('static', filename='images/mongodb.svg') }}" class="skill-icon" alt="MongoDB"> MongoDB</li>
+      </ul>
+
+    </div>
+
+  </div>
+</section>
+
+<section class="social-section">
+  <h3>FIND ME ON</h3>
+  <p>Feel free to connect with me</p>
+  <div class="social-links">
+    <a href="https://github.com/Sa2ff" target="_blank" rel="noopener">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub" class="social-icon">
+    </a>
+    <a href="https://www.linkedin.com/in/maya-kadayat-7a949a2a5/" target="_blank" rel="noopener">
+      <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="social-icon">
+    </a>
+    <a href="https://www.instagram.com/atrias69/" target="_blank" rel="noopener">
+      <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram" class="social-icon">
+    </a>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>Designed and Developed by Maya kadayat</p>
+  <p>&copy; 2025 SS</p>
+</footer>
+
+{% endblock %}

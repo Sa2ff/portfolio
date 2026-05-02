@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% block title %}Projects{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/projects.css') }}">
+{% endblock %}
+
+{% block content %}
+<section class="projects">
+    <h2>My Projects</h2>
+    <img src="{{ url_for('static', filename='images/projects.svg') }}" alt="Projects Image">
+    
+    <div class="project-list">
+
+    <div class="project-card">
+        <img src="{{ url_for('static', filename='images/projects/hospital.png') }}" alt="Hospital App">
+        <h3>Hospital Management System</h3>
+        <p>A Spring Boot and Thymeleaf-based web app to manage doctors, patients, appointments, and admin tasks.</p>
+        <a href="https://github.com/yourusername/hospital-management" target="_blank">GitHub</a>
+        <a href="https://your-hospital-demo-link.com" target="_blank">Live Demo</a>
+    </div>
+
+    <div class="project-card">
+        <img src="{{ url_for('static', filename='images/projects/portfolio.png') }}" alt="Portfolio Website">
+        <h3>My app</h3>
+        <p>a app built using Flask, HTML, CSS, and Bootstrap.</p>
+        <a href="https://github.com/Sa2ff/myapp" target="_blank">GitHub</a>
+        <a href="https://your-portfolio-demo-link.com" target="_blank">Live Demo</a>
+    </div>
+
+    <div class="project-card">
+        <img src="{{ url_for('static', filename='images/projects/flower.png') }}" alt="Flower Recognition App">
+        <h3>Flower Recognition</h3>
+        <p>Classifies flower species using a machine learning model trained on flower images.</p>
+        <a href="https://github.com/Sa2ff/flower-recognition" target="_blank">GitHub</a>
+        <a href="https://your-flower-demo-link.com" target="_blank">Live Demo</a>
+    </div>
+
+    <div class="project-card">
+        <img src="{{ url_for('static', filename='images/projects/movie.png') }}" alt="Movie Recommender">
+        <h3>Movie Recommender</h3>
+        <p>Suggests movies based on user preferences using collaborative filtering.</p>
+        <a href="https://github.com/Sa2ff/movie-recommanded" target="_blank">GitHub</a>
+        <a href="https://your-movie-demo-link.com" target="_blank">Live Demo</a>
+    </div>
+
+    <div class="project-card">
+        <img src="{{ url_for('static', filename='images/projects/object.png') }}" alt="Object Detection">
+        <h3>Object Detection</h3>
+        <p>Detects objects in real-time using a pre-trained YOLO model.</p>
+        <a href="https://github.com/Sa2ff/object-detection-" target="_blank">GitHub</a>
+        <a href="https://sa2ff.github.io/object-detection-/" target="_blank">Live Demo</a>
+    </div>
+
+</div>
+
+</section>
+
+<footer class="footer">
+    <p>Designed and Developed by Maya kadayat</p>
+    <p>&copy; 2025 SS</p>
+</footer>
+{% endblock %}

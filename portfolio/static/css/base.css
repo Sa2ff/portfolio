@@ -1,0 +1,120 @@
+/* base.css */
+
+/* Night sky background for entire body */
+body {
+  margin: 0;
+  background: linear-gradient(to bottom, #0b1d51, #000011);
+  position: relative;
+  min-height: 100vh;
+  color: white;
+  overflow-x: hidden;
+  z-index: 0;
+}
+
+body::before {
+  content: "";
+  display: block;
+  pointer-events: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: transparent;
+box-shadow:
+  10px 20px 3px 2px white,
+  20px 30px 3px 2px white,
+  35px 45px 3px 2px white,
+  50px 80px 3px 2px white,
+  70px 60px 3px 2px white,
+  90px 120px 3px 2px white,
+  110px 70px 3px 2px white,
+  120px 60px 3px 2px white,
+  140px 100px 3px 2px white,
+  160px 40px 3px 2px white,
+  180px 75px 3px 2px white,
+  200px 150px 3px 2px white,
+  220px 90px 3px 2px white,
+  250px 90px 3px 2px white,
+  270px 130px 3px 2px white,
+  290px 50px 3px 2px white,
+  300px 200px 3px 2px white,
+  320px 60px 3px 2px white,
+  350px 120px 3px 2px white,
+  370px 140px 3px 2px white,
+  400px 50px 3px 2px white,
+  420px 180px 3px 2px white,
+  450px 170px 3px 2px white,
+  470px 100px 3px 2px white,
+  500px 100px 3px 2px white,
+  520px 130px 3px 2px white,
+  550px 130px 3px 2px white,
+  570px 160px 3px 2px white,
+  600px 80px 3px 2px white,
+  620px 140px 3px 2px white,
+  650px 190px 3px 2px white,
+  670px 110px 3px 2px white,
+  700px 150px 3px 2px white,
+  720px 80px 3px 2px white,
+  740px 190px 3px 2px white,
+  760px 120px 3px 2px white,
+  780px 70px 3px 2px white,
+  800px 160px 3px 2px white,
+  820px 130px 3px 2px white,
+  840px 100px 3px 2px white;
+
+  animation: twinkle 3s infinite alternate;
+  z-index: -1;
+}
+
+@keyframes twinkle {
+  from { opacity: 1; }
+  to { opacity: 0.5; }
+}
+
+
+
+
+header {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 15px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+    color: #3498db;
+}
+
+footer {
+    background-color: #222;
+    color: #ddd;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 50px;
+    font-size: 0.9rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}

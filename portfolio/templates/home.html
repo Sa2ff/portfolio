@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <div class="hero-text">
+        <h1>Hi There! 👋🏻<br>I'M Maya kadayat</h1>
+        <p class="typed-text"></p> <!-- Typing animation will go here -->
+    </div>
+    <div class="hero-image">
+        <img src="{{ url_for('static', filename='images/homemain.svg') }}" alt="Home Image">
+    </div>
+</section>
+
+<section class="intro-section">
+    <div class="intro-container">
+        <div class="intro-text">
+            <h2>LET ME INTRODUCE MYSELF</h2>
+            <p>I fell in love with programming and I have at least learnt something, I think… 🤷‍♂️</p>
+            <p>I am fluent in classics like C++, JavaScript, and Go.</p>
+            <p>My field of interest is building new Web Technologies and Products and also in areas related to Blockchain.</p>
+            <p>Whenever possible, I also apply my passion for developing products with Node.js and modern JavaScript libraries and frameworks like React.js and Next.js.</p>
+        </div>
+        <div class="avatar">
+            <img src="{{ url_for('static', filename='images/avtar.svg') }}" alt="Avatar">
+        </div>
+    </div>
+</section>
+
+<section class="social-section">
+    <h3>FIND ME ON</h3>
+    <p>Feel free to connect with me</p>
+    <div class="social-links">
+        <a href="https://github.com/Sa2ff" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub" class="social-icon">
+        </a>
+        <a href="https://www.linkedin.com/in/maya-kadayat-7a949a2a5/" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="social-icon">
+        </a>
+        <a href="https://www.instagram.com/atiras333/" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram" class="social-icon">
+        </a>
+    </div>
+</section>
+
+<footer class="footer">
+    <p>Designed and Developed by Maya kadayat</p>
+    <p>&copy; 2025 SS</p>
+</footer>
+
+<!-- Typing effect -->
+<script>
+  const typedText = document.querySelector('.typed-text');
+  const words = ['Software Developer', 'Web Enthusiast', 'Tech Learner','AI developer','java developer'];
+  let wordIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+
+  function type() {
+    const currentWord = words[wordIndex];
+    if (isDeleting) {
+      typedText.textContent = currentWord.substring(0, charIndex--);
+    } else {
+      typedText.textContent = currentWord.substring(0, charIndex++);
+    }
+
+    if (!isDeleting && charIndex === currentWord.length) {
+      isDeleting = true;
+      setTimeout(type, 1000);
+    } else if (isDeleting && charIndex === 0) {
+      isDeleting = false;
+      wordIndex = (wordIndex + 1) % words.length;
+      setTimeout(type, 500);
+    } else {
+      setTimeout(type, isDeleting ? 60 : 100);
+    }
+  }
+
+  type();
+</script>
+{% endblock %}
